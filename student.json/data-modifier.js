@@ -5,7 +5,7 @@ async function dataModifiedByGroup() {
     .then(response => response.json())
 
   // reduce kullanarak dataModified adında bir 0bje variable'ı oluşturdum
-    const dataModified = await data.reduce((acc, curr) => {
+  const dataModified = await data.reduce((acc, curr) => {
     if (acc[curr.group]) {
       acc[curr.group].push(curr)
     } else {
